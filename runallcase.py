@@ -24,9 +24,9 @@ def all_case():
 def email(filepath):
     subject=data.iloc[0,2]
     smtpserver='smtp.mxhichina.com'
-    sender="lih@liefengtech.com"
-    psw2="jayhong1234**"
-    receiver="jayhong1234@163.com"
+    sender=
+    psw2=
+    receiver=
 #data.iloc[range(1,14), 2]
     with open(filepath,"rb")as fp:
         mail_body=fp.read()
