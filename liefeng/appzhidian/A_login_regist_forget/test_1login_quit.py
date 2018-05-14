@@ -4,7 +4,7 @@ import time
 from appium import webdriver
 import logging,unittest
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium.common.exceptions import TimeoutException
+
 
 
 class applogin(unittest.TestCase):
@@ -50,18 +50,17 @@ class applogin(unittest.TestCase):
             return False
 
     def log(self):
-        logger = logging.getLogger()
-        logger.setLevel(logging.INFO)  # Log等级总开关
-        logfile = 'D:\\liefeng\\liefeng2\\log\\logger.txt'
-        fh = logging.FileHandler(logfile, mode='a')
-        fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.WARNING)  # 输出到console的log等级的开关
-        formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
-        fh.setFormatter(formatter)
-        ch.setFormatter(formatter)
-        logger.addHandler(fh)
-        logger.addHandler(ch)
+        logging.basicConfig(level=logging.INFO,
+                            format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                            datefmt='%a, %d %b %Y %H:%M:%S',
+                            filename='D:\\liefeng\\liefeng2\\log\\logger.txt',
+                            filemode='w')
+
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+        console.setFormatter(formatter)
+        logging.getLogger('').addHandler(console)
 
 
 
@@ -173,6 +172,6 @@ class applogin(unittest.TestCase):
             logging.info(u"click________%s" % quit.text)
             quit.click()
             self.driver.close_app()
-
+            self.driver.quit()
 if __name__ == "__main__":
     unittest.main()

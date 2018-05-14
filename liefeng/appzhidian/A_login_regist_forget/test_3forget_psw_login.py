@@ -4,11 +4,21 @@ import time
 from appium import webdriver
 import logging,unittest
 import pandas as pd
+from xlwt import *
+import pymysql
+import xlwt
+import xlrd
+from xlutils.copy import copy
+from xlwt import Style
+
+
+import warnings
+warnings.filterwarnings("ignore")
 
 class applogin(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(60)
+        time.sleep(20)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",
@@ -41,30 +51,48 @@ class applogin(unittest.TestCase):
         time.sleep(1)
         self.driver.find_element_by_name(u"登录").click()
 
+    #写入Excel
+    def writeExcel(self, row, col, str, styl=Style.default_style):
+        rb = xlrd.open_workbook('D:\\liefeng\\liefeng2\\log\\app.xls', formatting_info=True)
+        wb = copy(rb)
+        ws = wb.get_sheet(0)
+        ws.write(row, col, str, styl)
+        wb.save('D:\\liefeng\\liefeng2\\log\\app.xls')
+
     def log(self):
-        logger = logging.getLogger()
-        logger.setLevel(logging.INFO)  # Log等级总开关
-        logfile = 'D:\\liefeng\\liefeng2\\log\\logger.txt'
-        fh = logging.FileHandler(logfile, mode='a')
-        fh.setLevel(logging.DEBUG)  # 输出到file的log等级的开关
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.WARNING)  # 输出到console的log等级的开关
-        formatter = logging.Formatter("%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s")
-        fh.setFormatter(formatter)
-        ch.setFormatter(formatter)
-        logger.addHandler(fh)
-        logger.addHandler(ch)
+        logging.basicConfig(level=logging.INFO,
+                            format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
+                            datefmt='%a, %d %b %Y %H:%M:%S',
+                            filename='D:\\liefeng\\liefeng2\\log\\logger.txt',
+                            filemode='w')
 
-
+        console = logging.StreamHandler()
+        console.setLevel(logging.INFO)
+        formatter = logging.Formatter('%(name)-12s: %(levelname)-8s %(message)s')
+        console.setFormatter(formatter)
+        logging.getLogger('').addHandler(console)
 
     def test_forgetpsw(self):
         self.log()
         logging.info("APP_forget_password_modify_login start!")
-        data = pd.read_excel('D:\\liefeng\\liefeng1\\log\\app.xls')
+        data = pd.read_excel('D:\\liefeng\\liefeng2\\log\\app.xls')
         self.driver.find_element_by_name(u"找回密码").click()
         self.wait()
         time.sleep(2)
-        username = "13374892514"
+        username ="13374892516"
+        try:
+            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
+                                   password="user_2015",
+                                   db="basic", charset="utf8")
+            cur = conn.cursor()
+            sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
+            cur.execute(sql1)
+            self.oldpsw = cur.fetchall()
+            logging.info("get old password________________%s" % self.oldpsw)
+            conn.close()
+        except:
+            logging.info("regist account database checked  Flase!!!!!!! ")
+
         self.driver.find_element_by_name(u"请输入手机号码").send_keys(username)
         time.sleep(2)
         self.driver.find_element_by_name(u"获取验证码").click()
@@ -75,14 +103,20 @@ class applogin(unittest.TestCase):
         self.driver.find_element_by_name(u"下一步").click()
         self.wait()
         time.sleep(2)
-        password="123456798"
+        password=int(data.iloc[2,2])
         logging.info("post_modify_password___________%s"%password )
         self.driver.find_element_by_id("com.liefengtech.zhwy:id/edit_pass").send_keys(password)
         self.driver.find_element_by_xpath(
             "//android.widget.Button[@resource-id='com.liefengtech.zhwy:id/img_sub']").click()
         self.wait()
         time.sleep(2)
-        self.wait()
+
+        # 更新Excel数据
+        b = str(int(password) + 1)
+        logging.info("update password______________%s"%b)
+        style = xlwt.easyxf('font:height 180, color-index black, bold on;align: wrap on, vert centre, horiz center')
+        self.writeExcel(3, 3, b, style)
+
         time.sleep(10)
 
         self.login(username,password)
@@ -92,6 +126,21 @@ class applogin(unittest.TestCase):
         time.sleep(25)
         logging.info(u"登录成功")
 
+        # 验证数据库
+        logging.info("check database start !")
+        try:
+            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
+                                   password="user_2015",
+                                   db="basic", charset="utf8")
+            cur = conn.cursor()
+            sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
+            cur.execute(sql1)
+            self.newpsw= cur.fetchall()
+            logging.info("create new password________________%s" % self.newpsw)
+            conn.close()
+        except:
+            logging.info("regist account database checked  Flase!!!!!!! ")
+        self.assertEqual(self.oldpsw,self.oldpsw,msg=u"更改密码成功")
         me = self.driver.find_element_by_name(u"我")
         me.click()
         logging.info(u"open________%s" % me.text)
@@ -104,7 +153,7 @@ class applogin(unittest.TestCase):
         logging.info(u"click________%s" % quit.text)
         quit.click()
         self.driver.close_app()
-
+        self.driver.quit()
 
 if __name__ == "__main__":
     unittest.main()
