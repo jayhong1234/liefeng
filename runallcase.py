@@ -1,5 +1,5 @@
   # coding:utf-8
-import unittest, HTMLTestRunner, os
+import unittest, HTMLTestRunnerCN, os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -24,9 +24,9 @@ def all_case():
 def email(filepath):
     subject=data.iloc[0,2]
     smtpserver='smtp.mxhichina.com'
-    sender=
-    psw2=
-    receiver=
+    sender=data.iloc[17,2]
+    psw2=data.iloc[17,3]
+    receiver="jayhong1234@163.com"
 #data.iloc[range(1,14), 2]
     with open(filepath,"rb")as fp:
         mail_body=fp.read()
@@ -50,12 +50,12 @@ def email(filepath):
 
 # # 保存测试报告地址-文件目录
 # if __name__=='__main__':
-report_abspath = "D:\\liefeng\\liefeng1\\log\\result2.html"
+report_abspath = "D:\\liefeng\\liefeng2\\log\\result2.html"
 fp = open(report_abspath, "wb")
-runner = HTMLTestRunner.HTMLTestRunner(stream=fp, title=u"指点appUI功能测试报告", description=u"用例执行情况")
+runner = HTMLTestRunnerCN.HTMLTestRunner(stream=fp, title=u"指点appUI功能测试报告", description=u"用例执行情况",tester="LH")
 runner.run(all_case())
 fp.close()
 
 data = pd.read_excel('D:\\liefeng\\test_jmeter\\zhidian\\test_login\\jmeter_case\\sendemail.xls')
-filepath=("D:\\liefeng\\liefeng1\\log\\result2.html")
+filepath=("D:\\liefeng\\liefeng2\\log\\result2.html")
 email(filepath)
