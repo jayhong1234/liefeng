@@ -53,11 +53,7 @@ class applogin(unittest.TestCase):
 
     #写入Excel
     def writeExcel(self, row, col, str, styl=Style.default_style):
-        rb = xlrd.open_workbook('D:\\liefeng\\liefeng2\\log\\app.xls', formatting_info=True)
-        wb = copy(rb)
-        ws = wb.get_sheet(0)
-        ws.write(row, col, str, styl)
-        wb.save('D:\\liefeng\\liefeng2\\log\\app.xls')
+        rb = xlrd.
 
     def log(self):
         logging.basicConfig(level=logging.INFO,
@@ -75,15 +71,13 @@ class applogin(unittest.TestCase):
     def test_forgetpsw(self):
         self.log()
         logging.info("APP_forget_password_modify_login start!")
-        data = pd.read_excel('D:\\liefeng\\liefeng2\\log\\app.xls')
+        data = pd.read_excel('ls')
         self.driver.find_element_by_name(u"找回密码").click()
         self.wait()
         time.sleep(2)
         username ="13374892516"
         try:
-            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
-                                   password="user_2015",
-                                   db="basic", charset="utf8")
+            conn = pymysql.connect()
             cur = conn.cursor()
             sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
             cur.execute(sql1)
@@ -129,9 +123,7 @@ class applogin(unittest.TestCase):
         # 验证数据库
         logging.info("check database start !")
         try:
-            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
-                                   password="user_2015",
-                                   db="basic", charset="utf8")
+            conn = pymysql.connect(
             cur = conn.cursor()
             sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
             cur.execute(sql1)
