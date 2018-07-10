@@ -75,15 +75,13 @@ class forget_psw(unittest.TestCase):
     def test_forgetpsw(self):
         self.log()
         logging.info("APP_forget_password_modify_login start!")
-        data = pd.read_excel('D:\\liefeng\\liefeng2\\log\\app.xls')
+        data = pd.read_excel('ls')
         self.driver.find_element_by_name(u"找回密码").click()
         self.wait()
         time.sleep(2)
         username ="13374892516"
         try:
-            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
-                                   password="user_2015",
-                                   db="basic", charset="utf8")
+            conn = pymysql.connect()
             cur = conn.cursor()
             sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
             cur.execute(sql1)
@@ -138,9 +136,7 @@ class forget_psw(unittest.TestCase):
         # 验证数据库
         logging.info("check database start !")
         try:
-            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev",
-                                   password="user_2015",
-                                   db="basic", charset="utf8")
+            conn = pymysql.connect()
             cur = conn.cursor()
             sql1 = ("select password  from t_customer WHERE nick_name=%s" % username)
             cur.execute(sql1)

@@ -134,8 +134,7 @@ class regist(unittest.TestCase):
         #验证数据库
         logging.info("check database start !")
         try:
-            conn = pymysql.connect(host="rdsdfzqycy58p8m61jz7O.mysql.rds.aliyuncs.com", user="lfdev", password="user_2015",
-                                   db="basic", charset="utf8")
+            conn = pymysql.connect()
             cur = conn.cursor()
             sql1 = ("select global_id  from t_customer WHERE nick_name=%s"%sheel)
             cur.execute(sql1)

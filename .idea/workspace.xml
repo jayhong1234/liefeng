@@ -3,42 +3,13 @@
   <component name="ChangeListManager">
     <list id="7731618c-ff1a-449b-bdc6-1fc1dee162c9" name="Default" comment="" />
     <list default="true" id="d77ea682-564d-467f-93ae-78a56af93611" name="New changelist" comment="New changelist">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_cmny_classify.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_cmny_column.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_cmny_search.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_healthmore.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_healthnumber.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_housemore.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_housescene.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/error_morning.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/health_tw.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/health_tz.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/health_xy.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/health_zf.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sreenshots/鏃ョ▼澶囧繕鈥斿綍闊冲け璐ug.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C1_household/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housecontrol.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housemore.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housescene.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C2_health/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C2_health/test_health_more.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C2_health/test_health_nb.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C3_morningcall/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/liefeng/appzhidian/C3_morningcall/test_morningcall.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/log/liefeng2.xls" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/app.xls" afterPath="$PROJECT_DIR$/log/app.xls" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_classify.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_classify.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_column.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_column.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_search.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_search.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_shopping.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_shopping.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/logger.txt" afterPath="$PROJECT_DIR$/log/logger.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/result2.html" afterPath="$PROJECT_DIR$/log/result2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runallcase.py" afterPath="$PROJECT_DIR$/runallcase.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw_login.py" afterPath="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py" />
     </list>
     <ignored path="liefeng2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -94,18 +65,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_health_nb.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C2_health/test_health_nb.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="149" column="83" selection-start-line="149" selection-start-column="83" selection-end-line="149" selection-end-column="83" />
-              <folding>
-                <element signature="e#24#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="test_1login_quit.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -116,51 +75,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="runallcase.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="test_2regist_nopsw.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="runallcase.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/runallcase.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39220184">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <folding>
+                <element signature="e#17#54#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_cmny_search.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_search.py">
+      <file leaf-file-name="test_2regist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="29" selection-start-line="69" selection-start-column="29" selection-end-line="69" selection-end-column="29" />
-              <folding />
+              <caret line="70" column="54" selection-start-line="66" selection-start-column="8" selection-end-line="70" selection-end-column="54" />
+              <folding>
+                <marker date="1531188621957" expanded="true" signature="4651:4701" placeholder="select globa... t_customer" />
+                <marker date="1531188621957" expanded="true" signature="4850:4900" placeholder="select passw... t_customer" />
+                <marker date="1531188621957" expanded="true" signature="5050:5114" placeholder="select cust_... t_cust_login_account" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_cmny_shopping.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/B_commonity/test_cmny_shopping.py">
+      <file leaf-file-name="test_2registed_again.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_housecontrol.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housecontrol.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="47" column="34" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_housemore.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housemore.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+            <state vertical-scroll-proportion="1.0894495">
+              <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -254,7 +209,6 @@
         <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py" />
-        <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/C_household/test_housecontrol.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/C_household/test_housemore.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py" />
@@ -272,6 +226,7 @@
         <option value="$PROJECT_DIR$/liefeng/appzhidian/C2_health/test_health_nb.py" />
         <option value="$PROJECT_DIR$/liefeng/appzhidian/C3_morningcall/test_morningcall.py" />
         <option value="$PROJECT_DIR$/runallcase.py" />
+        <option value="$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py" />
       </list>
     </option>
   </component>
@@ -325,6 +280,96 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="log" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appzhidian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appzhidian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="C1_household" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liefeng" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="appzhidian" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="A_login_regist_forget" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -791,9 +836,9 @@
     <frame x="-8" y="0" width="1288" height="744" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3281759" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23895253" sideWeight="0.4308176" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23895253" sideWeight="0.4308176" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12933753" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1020,27 +1065,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="21" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.712159">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sreenshots/health_tw.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1088,13 +1112,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="28" selection-start-line="105" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sreenshots/error_healthnumber.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1131,24 +1148,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="149" column="83" selection-start-line="149" selection-start-column="83" selection-end-line="149" selection-end-column="83" />
           <folding>
-            <element signature="e#24#52#0" expanded="true" />
+            <element signature="e#24#52#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/runallcase.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39220184">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1164,22 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="36" selection-start-line="65" selection-start-column="36" selection-end-line="65" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housecontrol.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="34" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housemore.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
           <folding />
         </state>
       </provider>
@@ -1204,6 +1189,80 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_1login_quit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housemore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.1376147">
+          <caret line="355" column="19" selection-start-line="355" selection-start-column="19" selection-end-line="355" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/C1_household/test_housecontrol.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.04357798">
+          <caret line="47" column="34" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runallcase.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="31" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding>
+            <element signature="e#17#54#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist_nopsw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2regist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="70" column="54" selection-start-line="66" selection-start-column="8" selection-end-line="70" selection-end-column="54" />
+          <folding>
+            <marker date="1531188621957" expanded="true" signature="4651:4701" placeholder="select globa... t_customer" />
+            <marker date="1531188621957" expanded="true" signature="4850:4900" placeholder="select passw... t_customer" />
+            <marker date="1531188621957" expanded="true" signature="5050:5114" placeholder="select cust_... t_cust_login_account" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_3forget_psw.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68119264">
+          <caret line="59" column="54" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
+          <folding>
+            <element signature="e#28#39#0" expanded="true" />
+            <marker date="1531192844489" expanded="true" signature="2895:2944" placeholder="select passw... t_customer" />
+            <marker date="1531192844489" expanded="true" signature="5018:5067" placeholder="select passw... t_customer" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liefeng/appzhidian/A_login_regist_forget/test_2registed_again.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0894495">
+          <caret line="88" column="30" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
           <folding />
         </state>
       </provider>
