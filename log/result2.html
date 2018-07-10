@@ -123,9 +123,9 @@ function html_escape(s) {
 <div class='heading'>
 <h1 style="font-family: Microsoft YaHei">指点appUI功能测试报告</h1>
 <p class='attribute'><strong>测试人员 : </strong> LH</p>
-<p class='attribute'><strong>开始时间 : </strong> 2018-05-19 08:00:24</p>
-<p class='attribute'><strong>合计耗时 : </strong> 0:21:39.072000</p>
-<p class='attribute'><strong>测试结果 : </strong> 共 8，通过 8，通过率= 100.00%</p>
+<p class='attribute'><strong>开始时间 : </strong> 2018-06-23 13:27:54</p>
+<p class='attribute'><strong>合计耗时 : </strong> 0:54:33.001000</p>
+<p class='attribute'><strong>测试结果 : </strong> 共 15，通过 10，错误 5，通过率= 66.67%</p>
 
 <p class='description'>用例执行情况</p>
 </div>
@@ -133,10 +133,10 @@ function html_escape(s) {
 
 
 <p id='show_detail_line'>
-<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 100.00% }</a>
+<a class="btn btn-primary" href='javascript:showCase(0)'>概要{ 66.67% }</a>
 <a class="btn btn-danger" href='javascript:showCase(1)'>失败{ 0 }</a>
-<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 8 }</a>
-<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 8 }</a>
+<a class="btn btn-success" href='javascript:showCase(2)'>通过{ 10 }</a>
+<a class="btn btn-info" href='javascript:showCase(3)'>所有{ 15 }</a>
 </p>
 <table id='result_table' class="table table-condensed table-bordered table-hover">
 <colgroup>
@@ -196,6 +196,7 @@ root        : INFO     skip put identify
 root        : INFO     open________我
 root        : INFO     登录成功
 .mvp.MainTabActivity
+.mvp.MainTabActivity
 .mvp.SettingActivity
 root        : INFO     click________退出
 end!
@@ -206,57 +207,55 @@ end!
     </td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>liefeng.appzhidian.A_login_regist_forget.test_2regist.applogin</td>
-    <td class="text-center">1</td>
+<tr class='errorClass warning'>
+    <td>liefeng.appzhidian.A_login_regist_forget.test_2regist.regist</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center"><a href="javascript:showClassDetail('c2',1)" class="detail" id='c2'>详细</a></td>
 </tr>
 
-<tr id='pt2_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_regist_quit</div></td>
+<tr id='ft2_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_regist_quit</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse in" style="text-align:left">  -->
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse in" style="text-align:left">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt2_1'>通过</button>
-    <div id='div_pt2_1' class="collapse in" style="text-align:left">
+    <button id='btn_ft2_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft2_1'>错误</button>
+    <div id='div_ft2_1' class="collapse in" style="text-align:left">
     <pre>
     
-pt2_1: root        : INFO     APP_regist_right_telst start!
+ft2_1: root        : INFO     APP_regist_right_telst start!
 root        : INFO     APP_regist_right_telst start!
 .mvp.GetRegisterVeriyActivity
 root        : INFO     into___________注册
 root        : INFO     into___________注册
 .mvp.GetRegisterVeriyActivity
-root        : INFO     get identity number___________917314
-root        : INFO     get identity number___________917314
+root        : INFO     get identity number___________601611
+root        : INFO     get identity number___________601611
 .mvp.RegisterSetPwActivity
 root        : INFO     post password___________123456
 root        : INFO     post password___________123456
-.mvp.RegisterSetPwActivity
+.mvp.MainTabActivity
 .mvp.MainTabActivity
 root        : INFO     after success regist into__________主页
 root        : INFO     after success regist into__________主页
-root        : INFO     open________我
-root        : INFO     open________我
-.mvp.MainTabActivity
-.mvp.SettingActivity
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     check database start !
-root        : INFO     check database start !
-root        : INFO     global_id______________(u'C180519080305ff808181738541',)
-root        : INFO     global_id______________(u'C180519080305ff808181738541',)
-root        : INFO     password______________(u'E10ADC3949BA59ABBE56E057F20F883E',)
-root        : INFO     password______________(u'E10ADC3949BA59ABBE56E057F20F883E',)
-root        : INFO     cust_global_id______________(u'C180519080305ff808181738541',)
-root        : INFO     cust_global_id______________(u'C180519080305ff808181738541',)
-end!
+Traceback (most recent call last):
+  File "D:\liefeng\liefeng2\liefeng\appzhidian\A_login_regist_forget\test_2regist.py", line 120, in test_regist_quit
+    logging.info(u"open________%s" % me.text)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 70, in text
+    return self._execute(Command.GET_ELEMENT_TEXT)['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webelement.py", line 457, in _execute
+    return self._parent.execute(command, params)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
 
 
     </pre>
@@ -264,49 +263,43 @@ end!
     </td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>liefeng.appzhidian.A_login_regist_forget.test_2registed_again.applogin</td>
-    <td class="text-center">1</td>
+<tr class='errorClass warning'>
+    <td>liefeng.appzhidian.A_login_regist_forget.test_2registed_again.regist</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center"><a href="javascript:showClassDetail('c3',1)" class="detail" id='c3'>详细</a></td>
 </tr>
 
-<tr id='pt3_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_registed_again</div></td>
+<tr id='ft3_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_registed_again</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse in" style="text-align:left">  -->
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse in" style="text-align:left">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt3_1'>通过</button>
-    <div id='div_pt3_1' class="collapse in" style="text-align:left">
+    <button id='btn_ft3_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft3_1'>错误</button>
+    <div id='div_ft3_1' class="collapse in" style="text-align:left">
     <pre>
     
-pt3_1: root        : INFO     APP_regist_registed_again_test start!
+ft3_1: root        : INFO     APP_regist_registed_again_test start!
 root        : INFO     APP_regist_registed_again_test start!
 root        : INFO     APP_regist_registed_again_test start!
-.mvp.GetRegisterVeriyActivity
-root        : INFO     into___________注册
-root        : INFO     into___________注册
-root        : INFO     into___________注册
-.mvp.GetRegisterVeriyActivity
-root        : INFO     账号已存在，请登录
-root        : INFO     账号已存在，请登录
-root        : INFO     账号已存在，请登录
-root        : INFO     post_registed_account_is_get_right_identify
-root        : INFO     post_registed_account_is_get_right_identify
-root        : INFO     post_registed_account_is_get_right_identify
-root        : INFO     identity number___________请输入您的验证码
-root        : INFO     identity number___________请输入您的验证码
-root        : INFO     identity number___________请输入您的验证码
-.mvp.GetRegisterVeriyActivity
-root        : INFO     post_registed_account_is_regist___________False
-root        : INFO     post_registed_account_is_regist___________False
-root        : INFO     post_registed_account_is_regist___________False
-end!
+Traceback (most recent call last):
+  File "D:\liefeng\liefeng2\liefeng\appzhidian\A_login_regist_forget\test_2registed_again.py", line 64, in test_registed_again
+    self.driver.find_element_by_name(u"立即注册").click()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in find_element_by_name
+    return self.find_element(by=By.NAME, value=name)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 744, in find_element
+    {'using': by, 'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
 
 
     </pre>
@@ -314,49 +307,44 @@ end!
     </td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>liefeng.appzhidian.A_login_regist_forget.test_2regist_nopsw.applogin</td>
-    <td class="text-center">1</td>
+<tr class='errorClass warning'>
+    <td>liefeng.appzhidian.A_login_regist_forget.test_2regist_nopsw.regist</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center"><a href="javascript:showClassDetail('c4',1)" class="detail" id='c4'>详细</a></td>
 </tr>
 
-<tr id='pt4_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_nopsw</div></td>
+<tr id='ft4_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_nopsw</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse in" style="text-align:left">  -->
+    <button id='btn_ft4_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft4_1'>错误</button>
+    <div id='div_ft4_1' class="collapse in" style="text-align:left">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt4_1'>通过</button>
-    <div id='div_pt4_1' class="collapse in" style="text-align:left">
+    <button id='btn_ft4_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft4_1'>错误</button>
+    <div id='div_ft4_1' class="collapse in" style="text-align:left">
     <pre>
     
-pt4_1: root        : INFO     APP_regist_empty_password_test start!
+ft4_1: root        : INFO     APP_regist_empty_password_test start!
 root        : INFO     APP_regist_empty_password_test start!
 root        : INFO     APP_regist_empty_password_test start!
 root        : INFO     APP_regist_empty_password_test start!
-.mvp.GetRegisterVeriyActivity
-root        : INFO     进入___________注册
-root        : INFO     进入___________注册
-root        : INFO     进入___________注册
-root        : INFO     进入___________注册
-.mvp.GetRegisterVeriyActivity
-root        : INFO     获取验证码___________897894
-root        : INFO     获取验证码___________897894
-root        : INFO     获取验证码___________897894
-root        : INFO     获取验证码___________897894
-.mvp.RegisterSetPwActivity
-.mvp.RegisterSetPwActivity
-.mvp.RegisterSetPwActivity
-root        : INFO     post_empty_password_is_regist___________False
-root        : INFO     post_empty_password_is_regist___________False
-root        : INFO     post_empty_password_is_regist___________False
-root        : INFO     post_empty_password_is_regist___________False
-end!
+Traceback (most recent call last):
+  File "D:\liefeng\liefeng2\liefeng\appzhidian\A_login_regist_forget\test_2regist_nopsw.py", line 64, in test_nopsw
+    self.driver.find_element_by_name(u"立即注册").click()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in find_element_by_name
+    return self.find_element(by=By.NAME, value=name)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 744, in find_element
+    {'using': by, 'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
 
 
     </pre>
@@ -364,86 +352,45 @@ end!
     </td>
 </tr>
 
-<tr class='passClass warning'>
-    <td>liefeng.appzhidian.A_login_regist_forget.test_3forget_psw_login.applogin</td>
-    <td class="text-center">1</td>
+<tr class='errorClass warning'>
+    <td>liefeng.appzhidian.A_login_regist_forget.test_3forget_psw.forget_psw</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
     <td class="text-center">0</td>
+    <td class="text-center">1</td>
     <td class="text-center"><a href="javascript:showClassDetail('c5',1)" class="detail" id='c5'>详细</a></td>
 </tr>
 
-<tr id='pt5_1' class='hiddenRow'>
-    <td class='passCase'><div class='testcase'>test_forgetpsw</div></td>
+<tr id='ft5_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_forgetpsw</div></td>
     <td colspan='5' align='center'>
     <!--默认收起错误信息 -Findyou
-    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
-    <div id='div_pt5_1' class="collapse in" style="text-align:left">  -->
+    <button id='btn_ft5_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft5_1'>错误</button>
+    <div id='div_ft5_1' class="collapse in" style="text-align:left">  -->
 
     <!-- 默认展开错误信息 -Findyou -->
-    <button id='btn_pt5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt5_1'>通过</button>
-    <div id='div_pt5_1' class="collapse in" style="text-align:left">
+    <button id='btn_ft5_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft5_1'>错误</button>
+    <div id='div_ft5_1' class="collapse in" style="text-align:left">
     <pre>
     
-pt5_1: root        : INFO     APP_forget_password_modify_login start!
+ft5_1: root        : INFO     APP_forget_password_modify_login start!
 root        : INFO     APP_forget_password_modify_login start!
 root        : INFO     APP_forget_password_modify_login start!
 root        : INFO     APP_forget_password_modify_login start!
 root        : INFO     APP_forget_password_modify_login start!
-.mvp.GetForgetPwdVerityActivity
-root        : INFO     get old password________________(u'F1887D3F9E6EE7A32FE5E76F4AB80D63',)
-root        : INFO     get old password________________(u'F1887D3F9E6EE7A32FE5E76F4AB80D63',)
-root        : INFO     get old password________________(u'F1887D3F9E6EE7A32FE5E76F4AB80D63',)
-root        : INFO     get old password________________(u'F1887D3F9E6EE7A32FE5E76F4AB80D63',)
-root        : INFO     get old password________________(u'F1887D3F9E6EE7A32FE5E76F4AB80D63',)
-.mvp.GetForgetPwdVerityActivity
-root        : INFO     get_identity_number___________673818
-root        : INFO     get_identity_number___________673818
-root        : INFO     get_identity_number___________673818
-root        : INFO     get_identity_number___________673818
-root        : INFO     get_identity_number___________673818
-.mvp.ForgetPwResetPwActivity
-root        : INFO     post_modify_password___________123458
-root        : INFO     post_modify_password___________123458
-root        : INFO     post_modify_password___________123458
-root        : INFO     post_modify_password___________123458
-root        : INFO     post_modify_password___________123458
-.mvp.LoginActivity
-root        : INFO     update password______________123459
-root        : INFO     update password______________123459
-root        : INFO     update password______________123459
-root        : INFO     update password______________123459
-root        : INFO     update password______________123459
-.mvp.MainTabActivity
-.mvp.MainTabActivity
-root        : INFO     登录成功
-root        : INFO     登录成功
-root        : INFO     登录成功
-root        : INFO     登录成功
-root        : INFO     登录成功
-root        : INFO     check database start !
-root        : INFO     check database start !
-root        : INFO     check database start !
-root        : INFO     check database start !
-root        : INFO     check database start !
-root        : INFO     create new password________________(u'93897CC117A734BE93733779051C9926',)
-root        : INFO     create new password________________(u'93897CC117A734BE93733779051C9926',)
-root        : INFO     create new password________________(u'93897CC117A734BE93733779051C9926',)
-root        : INFO     create new password________________(u'93897CC117A734BE93733779051C9926',)
-root        : INFO     create new password________________(u'93897CC117A734BE93733779051C9926',)
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-.mvp.MainTabActivity
-.mvp.SettingActivity
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-end!
+Traceback (most recent call last):
+  File "D:\liefeng\liefeng2\liefeng\appzhidian\A_login_regist_forget\test_3forget_psw.py", line 79, in test_forgetpsw
+    self.driver.find_element_by_name(u"找回密码").click()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 362, in find_element_by_name
+    return self.find_element(by=By.NAME, value=name)
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 744, in find_element
+    {'using': by, 'value': value})['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
 
 
     </pre>
@@ -452,7 +399,7 @@ end!
 </tr>
 
 <tr class='passClass warning'>
-    <td>liefeng.appzhidian.B_commonity.test_cmny_classify.applogin</td>
+    <td>liefeng.appzhidian.B_commonity.test_cmny_classify.commonuty</td>
     <td class="text-center">1</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
@@ -484,100 +431,13 @@ root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
-.mvp.MainTabActivity
-.mvp.MainTabActivity
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-.mvp.MainTabActivity
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-.ui.base.CommonWebActivity
-root        : INFO     into 分类
-root        : INFO     into 分类
-root        : INFO     into 分类
-root        : INFO     into 分类
-root        : INFO     into 分类
-root        : INFO     into 分类
-.ui.base.CommonWebActivity
-root        : INFO     into 一级分类 果蔬
-root        : INFO     into 一级分类 果蔬
-root        : INFO     into 一级分类 果蔬
-root        : INFO     into 一级分类 果蔬
-root        : INFO     into 一级分类 果蔬
-root        : INFO     into 一级分类 果蔬
-.ui.base.CommonWebActivity
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     into 二级分类 蔬菜类
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-root        : INFO     Search Commodity Name 蔬菜沙拉（原价）
-.ui.base.CommonWebActivity
-root        : INFO     Is_Verify Commodity Open normal_____
-root        : INFO     Is_Verify Commodity Open normal_____
-root        : INFO     Is_Verify Commodity Open normal_____
-root        : INFO     Is_Verify Commodity Open normal_____
-root        : INFO     Is_Verify Commodity Open normal_____
-root        : INFO     Is_Verify Commodity Open normal_____
-
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-.ui.base.CommonWebActivity
-.ui.base.CommonWebActivity
-.ui.base.CommonWebActivity
-.ui.base.CommonWebActivity
-root        : INFO     您确定退出社区服务吗？
-root        : INFO     您确定退出社区服务吗？
-root        : INFO     您确定退出社区服务吗？
-root        : INFO     您确定退出社区服务吗？
-root        : INFO     您确定退出社区服务吗？
-root        : INFO     您确定退出社区服务吗？
-.mvp.MainTabActivity
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     open________我
-root        : INFO     Quit Community success
-root        : INFO     Quit Community success
-root        : INFO     Quit Community success
-root        : INFO     Quit Community success
-root        : INFO     Quit Community success
-root        : INFO     Quit Community success
-.mvp.MainTabActivity
-.mvp.SettingActivity
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
-root        : INFO     click________退出
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
+root        : INFO     商城分类出错
 end!
 
 
@@ -587,7 +447,7 @@ end!
 </tr>
 
 <tr class='passClass warning'>
-    <td>liefeng.appzhidian.B_commonity.test_cmny_column.applogin</td>
+    <td>liefeng.appzhidian.B_commonity.test_cmny_column.commonuty</td>
     <td class="text-center">1</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
@@ -614,22 +474,7 @@ root        : INFO     APP_community_column_test start!
 root        : INFO     APP_community_column_test start!
 root        : INFO     APP_community_column_test start!
 root        : INFO     APP_community_column_test start!
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-root        : INFO     login account 13577771111
-.mvp.MainTabActivity
-.mvp.MainTabActivity
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
-root        : INFO     skip put identify and login success
+root        : INFO     APP_community_column_test start!
 .mvp.MainTabActivity
 root        : INFO     into__________________________ 休闲娱乐
 root        : INFO     into__________________________ 休闲娱乐
@@ -638,6 +483,8 @@ root        : INFO     into__________________________ 休闲娱乐
 root        : INFO     into__________________________ 休闲娱乐
 root        : INFO     into__________________________ 休闲娱乐
 root        : INFO     into__________________________ 休闲娱乐
+root        : INFO     into__________________________ 休闲娱乐
+root        : INFO     Shop Information List
 root        : INFO     Shop Information List
 root        : INFO     Shop Information List
 root        : INFO     Shop Information List
@@ -646,6 +493,8 @@ root        : INFO     Shop Information List
 root        : INFO     Shop Information List
 root        : INFO     Shop Information List
 .ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
@@ -660,6 +509,8 @@ root        : INFO     休闲娱乐
 root        : INFO     休闲娱乐
 root        : INFO     休闲娱乐
 root        : INFO     休闲娱乐
+root        : INFO     休闲娱乐
+root        : INFO     休闲娱乐(2家)
 root        : INFO     休闲娱乐(2家)
 root        : INFO     休闲娱乐(2家)
 root        : INFO     休闲娱乐(2家)
@@ -674,6 +525,8 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
@@ -688,6 +541,9 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -709,6 +565,7 @@ root        : INFO     123
 root        : INFO     123
 root        : INFO     123
 root        : INFO     123
+root        : INFO     123
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -716,6 +573,8 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -731,6 +590,7 @@ root        : INFO     Print Shop Products Information_List:
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
+root        : INFO     Print Shop Products Information_List: 
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
@@ -738,6 +598,9 @@ root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     王者荣耀
+root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
@@ -759,6 +622,7 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -766,6 +630,8 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
 root        : INFO     王者荣耀
@@ -780,20 +646,23 @@ root        : INFO     5.0分
 root        : INFO     5.0分
 root        : INFO     5.0分
 root        : INFO     5.0分
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     销量249共3件商品
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
+root        : INFO     5.0分
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     销量249共0件商品
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
@@ -801,51 +670,27 @@ root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     救赎之翼
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     说过话费
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
-root        : INFO     ￥0.05
+root        : INFO     收藏
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
+root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
@@ -860,6 +705,8 @@ root        : INFO     into___________________________果蔬
 root        : INFO     into___________________________果蔬
 root        : INFO     into___________________________果蔬
 root        : INFO     into___________________________果蔬
+root        : INFO     into___________________________果蔬
+root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
@@ -868,6 +715,7 @@ root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 .ui.base.CommonWebActivity
+root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
@@ -882,6 +730,8 @@ root        : INFO     果蔬
 root        : INFO     果蔬
 root        : INFO     果蔬
 root        : INFO     果蔬
+root        : INFO     果蔬
+root        : INFO     果蔬(1家)
 root        : INFO     果蔬(1家)
 root        : INFO     果蔬(1家)
 root        : INFO     果蔬(1家)
@@ -896,6 +746,8 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
@@ -910,6 +762,8 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -925,6 +779,7 @@ root        : INFO     Print Shop Products Information_List:
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
+root        : INFO     Print Shop Products Information_List: 
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
@@ -932,6 +787,9 @@ root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     列丰果蔬
+root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
@@ -953,6 +811,7 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -960,6 +819,8 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
 root        : INFO     列丰果蔬
@@ -974,20 +835,23 @@ root        : INFO     5分
 root        : INFO     5分
 root        : INFO     5分
 root        : INFO     5分
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     销量6共1件商品
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
+root        : INFO     5分
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     销量6共0件商品
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
@@ -995,20 +859,23 @@ root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     蔬菜沙拉（原价）
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
-root        : INFO     ￥33.01
+root        : INFO     收藏
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
+root        : INFO     该店铺下还没有商品哦
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
@@ -1019,6 +886,7 @@ root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
 root        : INFO     Quit Shop Into Next Column
+root        : INFO     Quit Shop Into Next Column
 root        : INFO     into______________________________ 便利店
 root        : INFO     into______________________________ 便利店
 root        : INFO     into______________________________ 便利店
@@ -1026,6 +894,8 @@ root        : INFO     into______________________________ 便利店
 root        : INFO     into______________________________ 便利店
 root        : INFO     into______________________________ 便利店
 root        : INFO     into______________________________ 便利店
+root        : INFO     into______________________________ 便利店
+root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
 root        : INFO     Shop Information List:
@@ -1041,6 +911,7 @@ root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
+root        : INFO     社区服务
 root        : INFO     便利店
 root        : INFO     便利店
 root        : INFO     便利店
@@ -1048,13 +919,15 @@ root        : INFO     便利店
 root        : INFO     便利店
 root        : INFO     便利店
 root        : INFO     便利店
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
-root        : INFO     便利店(1家)
+root        : INFO     便利店
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
+root        : INFO     便利店(2家)
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -1062,13 +935,15 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
+root        : INFO     
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -1076,6 +951,40 @@ root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     小飞象智能家居
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -1091,6 +1000,7 @@ root        : INFO     Print Shop Products Information_List:
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
 root        : INFO     Print Shop Products Information_List: 
+root        : INFO     Print Shop Products Information_List: 
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
@@ -1098,20 +1008,24 @@ root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
 root        : INFO     社区服务
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
+root        : INFO     社区服务
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     
 root        : INFO     
 root        : INFO     
 root        : INFO     
@@ -1126,13 +1040,15 @@ root        : INFO
 root        : INFO     
 root        : INFO     
 root        : INFO     
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
-root        : INFO     ???????
+root        : INFO     
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
+root        : INFO     列丰便利店
 root        : INFO     4.0分
 root        : INFO     4.0分
 root        : INFO     4.0分
@@ -1140,20 +1056,23 @@ root        : INFO     4.0分
 root        : INFO     4.0分
 root        : INFO     4.0分
 root        : INFO     4.0分
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     销量220共10件商品
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
-root        : INFO     进店 
+root        : INFO     4.0分
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     销量279共1件商品
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
+root        : INFO     简介 
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
@@ -1161,66 +1080,28 @@ root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
 root        : INFO     收藏
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     蓝莓
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     含促销价商品
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     ￥45
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     可口可乐
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     ￥0.01
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     蓝莓（促销价）
-root        : INFO     ￥15
-root        : INFO     ￥15
-root        : INFO     ￥15
-root        : INFO     ￥15
-root        : INFO     ￥15
-root        : INFO     ￥15
-root        : INFO     ￥15
+root        : INFO     收藏
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     酒店
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
+root        : INFO     ￥136
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
+root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
@@ -1236,6 +1117,7 @@ root        : INFO     open________我
 root        : INFO     open________我
 root        : INFO     open________我
 root        : INFO     open________我
+root        : INFO     open________我
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
@@ -1243,8 +1125,12 @@ root        : INFO     Quit Community success
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+.mvp.MainTabActivity
+.mvp.MainTabActivity
 .mvp.MainTabActivity
 .mvp.SettingActivity
+root        : INFO     click________退出
 root        : INFO     click________退出
 root        : INFO     click________退出
 root        : INFO     click________退出
@@ -1261,7 +1147,7 @@ end!
 </tr>
 
 <tr class='passClass warning'>
-    <td>liefeng.appzhidian.B_commonity.test_cmny_search.applogin</td>
+    <td>liefeng.appzhidian.B_commonity.test_cmny_search.commonuty</td>
     <td class="text-center">1</td>
     <td class="text-center">1</td>
     <td class="text-center">0</td>
@@ -1289,6 +1175,381 @@ root        : INFO     test_CommunityHomePasge_and_Classify
 root        : INFO     test_CommunityHomePasge_and_Classify
 root        : INFO     test_CommunityHomePasge_and_Classify
 root        : INFO     test_CommunityHomePasge_and_Classify
+root        : INFO     test_CommunityHomePasge_and_Classify
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+root        : INFO     login account 13613132222
+.mvp.GetLoginVerityActivity
+.mvp.GetLoginVerityActivity
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put empty/error/right identify login
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+.mvp.LoginActivity
+.mvp.MainTabActivity
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+.ui.base.CommonWebActivity
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     Is_Verify Community Home Page Open normal_____
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     便利店
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+.ui.base.CommonWebActivity
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+root        : INFO     oder search history___________苹果
+.ui.base.CommonWebActivity
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+.ui.base.CommonWebActivity
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     热门搜索
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+root        : INFO     oder search history___________白萝卜
+.ui.base.CommonWebActivity
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+root        : INFO     输入搜索
+.ui.base.CommonWebActivity
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     社区服务
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     搜索
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+root        : INFO     没有找到相关宝贝，猜你可能喜欢下面的商品
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+root        : INFO     商城搜索出错
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.B_commonity.test_cmny_shopping.commonuty</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c9',1)" class="detail" id='c9'>详细</a></td>
+</tr>
+
+<tr id='pt9_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_cmny_appbar</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
+    <div id='div_pt9_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt9_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt9_1'>通过</button>
+    <div id='div_pt9_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt9_1: root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     APP_community_appbar_test start!
+root        : INFO     login account 13577771111
+root        : INFO     login account 13577771111
+root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
 root        : INFO     login account 13577771111
@@ -1307,247 +1568,49 @@ root        : INFO     skip put identify and login success
 root        : INFO     skip put identify and login success
 root        : INFO     skip put identify and login success
 root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
 .mvp.MainTabActivity
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     Is_Verify Community Home Page Open normal_____
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     便利店
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-root        : INFO     True
-.ui.base.CommonWebActivity
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     历史搜索
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-root        : INFO     oder search history___________苹果
-.ui.base.CommonWebActivity
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     促销时间—苹果
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-.ui.base.CommonWebActivity
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     热门搜索
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-root        : INFO     oder search history___________白萝卜
-.ui.base.CommonWebActivity
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     促销时间内_白萝卜
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-root        : INFO     ￥12
-.ui.base.CommonWebActivity
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-root        : INFO     输入搜索
-.ui.base.CommonWebActivity
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     社区服务
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     搜索
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     索尼（SONY）（过期商品）
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
-root        : INFO     ￥50
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     下拉到精品推荐，点击商品选购
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     请补充商品信息，才能购买
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
+root        : INFO     支付失败，没有找到商品信息
 .ui.base.CommonWebActivity
 .ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
+root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
@@ -1557,6 +1620,10 @@ root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 root        : INFO     您确定退出社区服务吗？
 .mvp.MainTabActivity
+.mvp.MainTabActivity
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
 root        : INFO     open________我
 root        : INFO     open________我
 root        : INFO     open________我
@@ -1573,8 +1640,2363 @@ root        : INFO     Quit Community success
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
 root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+.mvp.MainTabActivity
 .mvp.MainTabActivity
 .mvp.SettingActivity
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.C1_household.test_housecontrol.household</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c10',1)" class="detail" id='c10'>详细</a></td>
+</tr>
+
+<tr id='pt10_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_household_first</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
+    <div id='div_pt10_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt10_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt10_1'>通过</button>
+    <div id='div_pt10_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt10_1: .mvp.LoginActivity
+.mvp.LoginActivity
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.mvp.GetLoginVerityActivity
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+.mvp.GetLoginVerityActivity
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put identify login
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     put right identify
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+root        : INFO     获取验证码为___________892538
+.mvp.LoginActivity
+.mvp.MainTabActivity
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+root        : INFO     login success
+.mvp.MainTabActivity
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.ui.base.CommonWebActivity
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     智慧家居
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     盒子离线或USB未连接
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     客厅 (3)
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     电灯
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     厕所灯
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     离线
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     客厅吊灯
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     区域控制
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     实景控制
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     Test_Input_EquipmentName_____!!!!这里有需求bug，名称输入空的，特殊符号，可怕
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     clear and input
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     Change________________电灯
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+root        : INFO     清除功能正常
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+root        : INFO     提交
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     None
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+root        : INFO     Test Input TooLong Name
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     提示
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+root        : INFO     名字不能超过10个字!
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.SettingActivity
+.mvp.SettingActivity
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.C1_household.test_housemore.household</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c11',1)" class="detail" id='c11'>详细</a></td>
+</tr>
+
+<tr id='pt11_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_household_more</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt11_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt11_1'>通过</button>
+    <div id='div_pt11_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt11_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt11_1'>通过</button>
+    <div id='div_pt11_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt11_1: root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.mvp.LoginActivity
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+root        : INFO     Login_account____________13613132222
+.mvp.MainTabActivity
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+root        : INFO     skip put identify and login success
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     Into_house___________更多
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+root        : INFO     家居更多出错，详见截图
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.C1_household.test_housescene.household</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c12',1)" class="detail" id='c12'>详细</a></td>
+</tr>
+
+<tr id='pt12_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_household_first</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt12_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt12_1'>通过</button>
+    <div id='div_pt12_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt12_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt12_1'>通过</button>
+    <div id='div_pt12_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt12_1: root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     Test_Choose_And_Open_Household_First!
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.mvp.MainTabActivity
+.ui.base.CommonWebActivity
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________选择家庭
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+root        : INFO     into__________________列丰科技010101
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+root        : INFO     场景
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+root        : INFO     添加场景
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+root        : INFO     into_________________添加场景
+.ui.WebApiImageSelectorActivity
+.ui.WebApiImageSelectorActivity
+com.yongchun.library.view.ImageCropActivity
+com.yongchun.library.view.ImageCropActivity
+com.yongchun.library.view.ImageCropActivity
+.ui.base.CommonWebActivity
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+root        : INFO     家居场景出错，详见截图
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='errorClass warning'>
+    <td>liefeng.appzhidian.C2_health.test_health_more.applogin</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center">1</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c13',1)" class="detail" id='c13'>详细</a></td>
+</tr>
+
+<tr id='ft13_1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_health_more</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_ft13_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_ft13_1'>错误</button>
+    <div id='div_ft13_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_ft13_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_ft13_1'>错误</button>
+    <div id='div_ft13_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+ft13_1: root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+root        : INFO     更多
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+root        : INFO     健康检查更多，详见截图
+Traceback (most recent call last):
+  File "D:\liefeng\liefeng2\liefeng\appzhidian\C2_health\test_health_more.py", line 360, in test_health_more
+    self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\error_healthmore.png")
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 790, in get_screenshot_as_file
+    png = self.get_screenshot_as_png()
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 809, in get_screenshot_as_png
+    return base64.b64decode(self.get_screenshot_as_base64().encode('ascii'))
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 819, in get_screenshot_as_base64
+    return self.execute(Command.SCREENSHOT)['value']
+  File "C:\Python27\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 233, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python27\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+WebDriverException: Message: 
+
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.C2_health.test_health_nb.applogin</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c14',1)" class="detail" id='c14'>详细</a></td>
+</tr>
+
+<tr id='pt14_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_health_nb</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt14_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt14_1'>通过</button>
+    <div id='div_pt14_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt14_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt14_1'>通过</button>
+    <div id='div_pt14_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt14_1: root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     Test_Choose_And_Open_Health!
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.mvp.MainTabActivity
+.ui.base.CommonWebActivity
+.ui.base.CommonWebActivity
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+root        : INFO     健康检测数据出错，详见截图
+end!
+
+
+    </pre>
+    </div>
+    </td>
+</tr>
+
+<tr class='passClass warning'>
+    <td>liefeng.appzhidian.C3_morningcall.test_morningcall.household</td>
+    <td class="text-center">1</td>
+    <td class="text-center">1</td>
+    <td class="text-center">0</td>
+    <td class="text-center">0</td>
+    <td class="text-center"><a href="javascript:showClassDetail('c15',1)" class="detail" id='c15'>详细</a></td>
+</tr>
+
+<tr id='pt15_1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_morningcall</div></td>
+    <td colspan='5' align='center'>
+    <!--默认收起错误信息 -Findyou
+    <button id='btn_pt15_1' type="button"  class="btn btn-danger btn-xs collapsed" data-toggle="collapse" data-target='#div_pt15_1'>通过</button>
+    <div id='div_pt15_1' class="collapse in" style="text-align:left">  -->
+
+    <!-- 默认展开错误信息 -Findyou -->
+    <button id='btn_pt15_1' type="button"  class="btn btn-danger btn-xs" data-toggle="collapse" data-target='#div_pt15_1'>通过</button>
+    <div id='div_pt15_1' class="collapse in" style="text-align:left">
+    <pre>
+    
+pt15_1: root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+root        : INFO     [u'NATIVE_APP']
+.mvp.MainTabActivity
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     添加 Morning Call
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     时间
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     :
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     重复
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     主题
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     显示设备
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     (可多选)
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     天气预报
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+root        : INFO     室内温度
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+.ui.ScenesListActivity
+.ui.ScenesListActivity
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     家居控制
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+root        : INFO     暂无数据
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.ui.BgMusicListActivity
+.ui.BgMusicListActivity
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     背景音乐
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     静音
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐&amp;欧美经典英文歌曲-雪花的快乐
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-大自然音乐 宁静
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-恋人小夜曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+root        : INFO     轻音乐-月光曲
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.MorningCallMomeActivity
+.mvp.MorningCallMomeActivity
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     日程备忘
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+root        : INFO     切换文字
+.mvp.MorningCallMomeActivity
+.mvp.MorningCallMomeActivity
+.mvp.MorningCallMomeActivity
+.mvp.MorningCallMomeActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+root        : INFO     日程备忘保存成功
+.mvp.MorningCallMomeActivity
+.mvp.MorningCallMomeActivity
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     健康提示
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+root        : INFO     True
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     Morning Call
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     14:20
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     周二,五,日
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+root        : INFO     请叫我大哥
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     删除MorningCall
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+root        : INFO     是否删除？
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+.mvp.AddMorningCallActivity
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Cilck_———————点击右上角或这里
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+root        : INFO     Into_———————添加 Morning Call
+.mvp.MorningCallIndexActivity
+.mvp.MorningCallIndexActivity
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+root        : INFO     Quit_———————添加 Morning Call
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+root        : INFO     Quit_———————Morningcall
+.mvp.MainTabActivity
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     open________我
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+root        : INFO     Quit Community success
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.MainTabActivity
+.mvp.SettingActivity
+.mvp.SettingActivity
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
+root        : INFO     click________退出
 root        : INFO     click________退出
 root        : INFO     click________退出
 root        : INFO     click________退出
@@ -1593,11 +4015,11 @@ end!
 
 <tr id='total_row' class="text-center active">
     <td>总计</td>
-    <td>8</td>
-    <td>8</td>
+    <td>15</td>
+    <td>10</td>
     <td>0</td>
-    <td>0</td>
-    <td>通过率：100.00%</td>
+    <td>5</td>
+    <td>通过率：66.67%</td>
 </tr>
 </table>
 

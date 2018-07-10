@@ -14,10 +14,10 @@ from xlwt import Style
 import warnings
 warnings.filterwarnings("ignore")
 
-class applogin(unittest.TestCase):
+class regist(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(20)
+        time.sleep(100)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",
@@ -118,6 +118,8 @@ class applogin(unittest.TestCase):
         me = self.driver.find_element_by_name(u"我")
         me.click()
         logging.info(u"open________%s" % me.text)
+        self.wait()
+        time.sleep(2)
         self.wait()
         time.sleep(2)
         self.driver.find_element_by_accessibility_id(u"设置").click()

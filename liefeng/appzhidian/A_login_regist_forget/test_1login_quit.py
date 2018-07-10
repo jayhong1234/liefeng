@@ -5,8 +5,6 @@ from appium import webdriver
 import logging,unittest
 from selenium.webdriver.support.wait import WebDriverWait
 
-
-
 class applogin(unittest.TestCase):
     @classmethod
     def setUp(self):
@@ -40,6 +38,13 @@ class applogin(unittest.TestCase):
         self.driver.find_element_by_id("com.liefengtech.zhwy:id/edit_pass").send_keys(psw)
         self.driver.find_element_by_name(u"登录").click()
         #空密码
+
+    def swipeUp(self, t=500, n=1):
+        x1 = self.l['width'] * 0.5
+        y1 = self.l['height'] * 0.75
+        y2 = self.l['height'] * 0.25
+        for i in range(n):
+            self.driver.swipe(x1, y1, x1, y2, t)
 
     def is_login(self):
         try:
@@ -150,6 +155,10 @@ class applogin(unittest.TestCase):
             logging.info(u"open________%s"%me.text)
             self.wait()
             time.sleep(2)
+            self.wait()
+            time.sleep(2)
+            self.swipeUp()
+            time.sleep(2)
             self.driver.find_element_by_accessibility_id(u"设置").click()
             self.wait()
             time.sleep(2)
@@ -164,6 +173,10 @@ class applogin(unittest.TestCase):
             logging.info(u"open________%s" % me.text)
             logging.info(u"登录成功")
             self.wait()
+            time.sleep(2)
+            self.wait()
+            time.sleep(2)
+            self.swipeUp()
             time.sleep(2)
             self.driver.find_element_by_accessibility_id(u"设置").click()
             self.wait()

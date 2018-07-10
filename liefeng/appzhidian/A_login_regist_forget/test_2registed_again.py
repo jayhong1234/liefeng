@@ -5,10 +5,10 @@ from appium import webdriver
 import logging,unittest
 import pandas as pd
 
-class applogin(unittest.TestCase):
+class regist(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(20)
+        time.sleep(100)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",

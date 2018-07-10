@@ -7,10 +7,10 @@ import pandas as pd
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
-class applogin(unittest.TestCase):
+class regist(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(20)
+        time.sleep(100)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",

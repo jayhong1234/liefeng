@@ -1,14 +1,15 @@
 #coding:utf-8
-#LiH 2018-4-2
-import time
+#Lih06-12
+import logging,unittest,time
 from appium import webdriver
-import logging,unittest
+import pandas as pd
 from selenium.webdriver.support.wait import WebDriverWait
 
-class commonuty(unittest.TestCase):
+
+class applogin(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(120)
+        time.sleep(100)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",
@@ -23,7 +24,7 @@ class commonuty(unittest.TestCase):
         # "127.0.0.1:62001"
         self.driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
         self.driver.wait_activity(".base.ui.MainActivity", 15)
-
+        self.l = self.driver.get_window_size()
     @classmethod
     def tearDown(self):
         time.sleep(1)
@@ -44,7 +45,7 @@ class commonuty(unittest.TestCase):
         logging.basicConfig(level=logging.INFO,
                             format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
                             datefmt='%a, %d %b %Y %H:%M:%S',
-                            filename='D:\\liefeng\\liefeng2\\log\\logger.txt',
+                            filename='D:\\liefeng\\liefeng1\\log\\appzhidian.log',
                             filemode='w')
 
         console = logging.StreamHandler()
@@ -61,32 +62,51 @@ class commonuty(unittest.TestCase):
         except:
             return False
 
-    def is_search(self):
+    def swipeUp(self, t=500, n=1):
+        x1 = self.l['width'] * 0.5
+        y1 = self.l['height'] * 0.75
+        y2 = self.l['height'] * 0.25
+        for i in range(n):
+            self.driver.swipe(x1, y1, x1, y2, t)
+
+    def is_search(self, text):
         search = self.driver.find_elements_by_class_name("android.view.View")
         for i in range(len(search)):
             c = search[i].get_attribute("name")
             logging.info(c.strip())
 
+    def link_check(self,text_check):
+        self.wait()
+        time.sleep(2)
+        self.wait()
+        time.sleep(2)
+        self.is_search(text_check)
+        self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\health_xy.png")
+        time.sleep(1)
+        self.driver.find_element_by_class_name("android.widget.Button").click()
+        self.wait()
+        time.sleep(2)
 
-    def test_cmny_column(self):
+    def test_health_nb(self):
         try:
             self.log()
-            logging.info("APP_community_column_test start!")
-
-    #登录
+            logging.info("Test_Choose_And_Open_Health!")
+            data = pd.read_excel("D:\\liefeng\\liefeng2\\log\\app.xls")
+            logging.info(self.driver.contexts)
             try:
-                self.driver.find_element_by_accessibility_id(u"社区服务").click()
+                self.driver.find_element_by_accessibility_id(u"健康体检").click()
             except:
-                username = "13577771111"
-                password3 = "123456"
-                logging.info("login account %s" % username)
-                self.login(username, password3)
+                # 登录
+                username = int(data.iloc[9, 1])
+                password = int(data.iloc[9, 2])
+                self.login(username, password)
                 self.wait()
-                time.sleep(5)
+                time.sleep(15)
+                logging.info(u"Login_account____________%s" % username)
                 self.wait()
                 try:
                     WebDriverWait(self.driver, 20).until(lambda x: x.find_element_by_name(u"验证"))
-                    logging.info(u"put empty/error/right identify login")
+                    logging.info(u"put identify login")
                     identify = self.driver.find_element_by_xpath(
                         "//android.widget.EditText[@resource-id='com.liefengtech.zhwy:id/edit_verifyCode']")
 
@@ -94,105 +114,102 @@ class commonuty(unittest.TestCase):
                     logging.info("put right identify")
                     self.driver.find_element_by_name(u"获取验证码").click()
                     time.sleep(5)
-                    logging.info(u"获取验证码为_________________%s" % identify.text)
+                    logging.info(u"获取验证码为___________%s" % identify.text)
                     self.driver.find_element_by_name(u"确定").click()
                     self.wait()
                     time.sleep(5)
                     self.wait()
                     time.sleep(25)
                     logging.info("login success")
+
                 except:
-                    time.sleep(15)
                     logging.info("skip put identify and login success")
-                self.driver.find_element_by_accessibility_id(u"社区服务").click()
+                    self.wait()
+                    time.sleep(2)
+                #健康数据
+                self.driver.find_element_by_accessibility_id(u"健康体检").click()
             self.wait()
-            time.sleep(30)
+            time.sleep(2)
+            self.wait()
+            time.sleep(5)
+            self.wait()
+            time.sleep(1)
+            self.is_search(u"健康数据")
 
-            aa=self.driver.find_element_by_accessibility_id(u"休闲娱乐")
-            logging.info("into__________________________ %s"%aa.get_attribute("name"))
-            logging.info("Shop Information List")
-            aa.click()
-            self.wait()
-            time.sleep(2)
-            self.wait()
-            time.sleep(3)
-            self.is_search()
-        #进店
-            self.driver.find_element_by_accessibility_id(u"简介").click()
-            self.wait()
-            time.sleep(2)
-            logging.info("Print Shop Products Information_List: ")
-            self.is_search()
-        #退出到主页
-            self.driver.find_element_by_class_name("android.widget.Button").click()
-            self.wait()
-            time.sleep(2)
-            self.driver.find_element_by_class_name("android.widget.Button").click()
-            self.wait()
-            time.sleep(2)
-            self.wait()
-            time.sleep(15)
 
-        #果蔬
-            aa = self.driver.find_element_by_accessibility_id(u"果蔬")
-            logging.info("Quit Shop Into Next Column")
-            logging.info("into___________________________%s" % aa.get_attribute("name"))
-            logging.info("Shop Information List:")
-            aa.click()
+            # 血压 Link
+            self.driver.find_element_by_accessibility_id("血压 Link").click()
+            text_check = u"血压"
             self.wait()
             time.sleep(2)
-            self.is_search()
-            # 进店
-            self.driver.find_element_by_accessibility_id(u"简介").click()
+            self.wait()
+            time.sleep(5)
+            self.is_search(text_check)
+            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\health_xy.png")
+            time.sleep(1)
+            self.driver.find_element_by_class_name("android.widget.Button").click()
+            self.wait()
+            time.sleep(10)
             self.wait()
             time.sleep(2)
-            logging.info("Print Shop Products Information_List: ")
-            self.is_search()
-            # 退出到主页
+            # 体温 Link
+            a=self.driver.find_elements_by_class_name("android.view.View")
+            a[15].click()
+            text = u" 体温 Link"
+            text_check = u"体温"
+            self.wait()
+            time.sleep(2)
+            self.wait()
+            time.sleep(5)
+            self.is_search(text_check)
+            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\health_tw.png")
+            time.sleep(1)
+            self.driver.find_element_by_class_name("android.widget.Button").click()
+            self.wait()
+            time.sleep(10)
+            self.wait()
+            time.sleep(2)
+            # 脂肪
+            a = self.driver.find_elements_by_class_name("android.view.View")
+            a[16].click()
+            text = u" 脂肪 Link"
+            text_check = u"脂肪"
+            # self.link_check(text, text_check)
+            self.wait()
+            time.sleep(2)
+            self.wait()
+            time.sleep(5)
+            self.is_search(text_check)
+            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\health_zf.png")
+            time.sleep(1)
+            self.driver.find_element_by_class_name("android.widget.Button").click()
+            self.wait()
+            time.sleep(10)
+            self.wait()
+            time.sleep(2)
+            # 体重 Link
+            a = self.driver.find_elements_by_class_name("android.view.View")
+            a[17].click()
+            text = u" 体重 Link"
+            text_check = u"体重"
+            self.wait()
+            time.sleep(2)
+            self.wait()
+            time.sleep(5)
+            self.is_search(text_check)
+            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\health_tz.png")
+            time.sleep(1)
             self.driver.find_element_by_class_name("android.widget.Button").click()
             self.wait()
             time.sleep(2)
-            self.driver.find_element_by_class_name("android.widget.Button").click()
             self.wait()
             time.sleep(2)
-            self.wait()
-            time.sleep(15)
 
-        # 便利店
-            aa = self.driver.find_element_by_accessibility_id(u"便利店")
-            logging.info("Quit Shop Into Next Column")
-            logging.info("into______________________________ %s" % aa.get_attribute("name"))
-            logging.info("Shop Information List:")
-            aa.click()
-            self.wait()
-            time.sleep(2)
-            self.is_search()
-            # 进店
-            self.driver.find_element_by_accessibility_id(u"简介").click()
-            self.wait()
-            time.sleep(2)
-            logging.info("Print Shop Products Information_List: ")
-            self.is_search()
-            # 退出到主页
             self.driver.find_element_by_class_name("android.widget.Button").click()
             self.wait()
-            time.sleep(2)
-            self.driver.find_element_by_class_name("android.widget.Button").click()
+            time.sleep(10)
             self.wait()
-            time.sleep(2)
-            self.wait()
-            time.sleep(15)
-            self.driver.find_element_by_class_name("android.widget.Button").click()
-            self.wait()
-            time.sleep(2)
-            try:
-                text = self.driver.find_element_by_name(u"您确定退出智联商城吗？").text
-            except:
-                text = self.driver.find_element_by_name(u"您确定退出社区服务吗？").text
-            logging.info(text)
-            self.driver.find_element_by_id("android:id/button1").click()
-            self.wait()
-            time.sleep(15)
+            time.sleep(5)
 
             # 退出账号
             me = self.driver.find_element_by_name(u"我")
@@ -203,30 +220,26 @@ class commonuty(unittest.TestCase):
             time.sleep(2)
             self.wait()
             time.sleep(2)
+            self.swipeUp()
             self.wait()
             time.sleep(2)
             self.driver.find_element_by_accessibility_id(u"设置").click()
             self.wait()
             time.sleep(2)
+            self.wait()
+            time.sleep(2)
             quit = self.driver.find_element_by_name(u"退出")
             logging.info(u"click________%s" % quit.text)
             quit.click()
-
-        #退出主页账号
-
             self.driver.close_app()
             self.driver.quit()
         except:
             self.log()
-            logging.info("商城column出错")
-            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\error_cmny_column.png")
+            logging.info("健康检测数据出错，详见截图")
+            self.driver.get_screenshot_as_file("D:\\liefeng\\liefeng2\\Sreenshots\\error_healthnumber.png")
             self.driver.close_app()
             self.driver.quit()
 
+
 if __name__ == "__main__":
     unittest.main()
-
-
-
-
-

@@ -15,10 +15,10 @@ from xlwt import Style
 import warnings
 warnings.filterwarnings("ignore")
 
-class applogin(unittest.TestCase):
+class forget_psw(unittest.TestCase):
     @classmethod
     def setUp(self):
-        time.sleep(20)
+        time.sleep(100)
         desired_caps = {
             'platformName': "Android",
             'deviceName': "127.0.0.1:62001",
@@ -123,8 +123,17 @@ class applogin(unittest.TestCase):
         self.wait()
         time.sleep(2)
         self.wait()
-        time.sleep(25)
-        logging.info(u"登录成功")
+        time.sleep(2)
+        try:
+            self.driver.find_element_by_name(u"获取验证码").click()
+            self.wait()
+            time.sleep(2)
+            self.driver.find_element_by_name(u"确定").click()
+            logging.info(u"登录成功")
+        except:
+            self.wait()
+            time.sleep(15)
+            logging.info(u"登录成功")
 
         # 验证数据库
         logging.info("check database start !")
@@ -140,10 +149,22 @@ class applogin(unittest.TestCase):
             conn.close()
         except:
             logging.info("regist account database checked  Flase!!!!!!! ")
-        self.assertEqual(self.oldpsw,self.oldpsw,msg=u"更改密码成功")
+        a=self.assertEqual(self.oldpsw,self.oldpsw,msg=u"更改密码成功")
+        logging.info(a)
+
+        self.wait()
+        time.sleep(5)
+        self.wait()
+        time.sleep(5)
+        self.wait()
+        time.sleep(5)
+        self.wait()
+        time.sleep(5)
         me = self.driver.find_element_by_name(u"我")
         me.click()
         logging.info(u"open________%s" % me.text)
+        self.wait()
+        time.sleep(2)
         self.wait()
         time.sleep(2)
         self.driver.find_element_by_accessibility_id(u"设置").click()
