@@ -2,10 +2,7 @@
 import logging, unittest, time
 from appium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
-import pandas as pd
-import xlwt, xlrd
-from xlutils.copy import copy
-from xlwt import Style
+
 from appium.webdriver.common.touch_action import TouchAction
 
 
@@ -53,13 +50,7 @@ class household(unittest.TestCase):
             if c == text:
                 logging.info("True")
 
-    def writeExcel(self, row, col, str, styl=Style.default_style):
-        rb = xlrd.open_workbook('D:\\liefeng\\liefeng2\\log\\app.xls', formatting_info=True)
-        wb = copy(rb)
-        ws = wb.get_sheet(0)
-        ws.write(row, col, str, styl)
-        wb.save('D:\\liefeng\\liefeng2\\log\\app.xls')
-
+ 
     def login(self, username, psw):
         self.driver.find_element_by_xpath(
             "//android.widget.EditText[@resource-id='com.liefengtech.zhwy:id/edit_phone']").send_keys(username)
