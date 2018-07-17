@@ -3,12 +3,7 @@
 import time
 from appium import webdriver
 import logging,unittest
-import pandas as pd
-import pymysql
-import xlwt
-import xlrd
-from xlutils.copy import copy
-from xlwt import Style
+
 
 
 import warnings
@@ -62,13 +57,7 @@ class regist(unittest.TestCase):
         console.setFormatter(formatter)
         logging.getLogger('').addHandler(console)
 
-#写入方法
-    def writeExcel(self,row, col, str, styl=Style.default_style):
-        rb = xlrd.open_workbook('D:\\liefeng\\liefeng2\\log\\app.xls', formatting_info=True)
-        wb = copy(rb)
-        ws = wb.get_sheet(0)
-        ws.write(row, col, str, styl)
-        wb.save('D:\\liefeng\\liefeng2\\log\\app.xls')
+
 
     def test_regist_quit(self):
         self.log()
